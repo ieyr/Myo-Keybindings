@@ -1,4 +1,4 @@
-scriptId = 'com.buildncode.codeday.basicfirstrun'
+scriptId = 'com.rohan.myokeybindings'
 
 recGesture = false
 inTabMenu = false
