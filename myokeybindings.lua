@@ -23,7 +23,6 @@ function onPoseEdge(pose, edge)
 
 	    	commandTab()
 	    elseif pose == "waveIn" and edge == "on" then
-	    	if()
 	    	myo.debug("waveIn - called leftTab")
 	    	leftTab()
 	    elseif pose == "waveOut" and edge == "on" then
@@ -51,6 +50,7 @@ function commandTab()
 	if inTabMenu==false then
 		myo.keyboard("left_command", "down")
 		myo.keyboard("tab", "press")
+		myo.keyboard("left_arrow", "press")
 		inTabMenu = true
 	elseif inTabMenu then
 		myo.keyboard("left_command", "up")
