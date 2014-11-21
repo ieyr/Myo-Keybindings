@@ -9,22 +9,25 @@ function onPoseEdge(pose, edge)
 		myo.debug("pinkyToThumb1")
 		if recGesture==false then
 			recGesture = true
+			myo.debug("receiving gestures now")
 		elseif recGesture then
 			recGesture = false
 		end
 	end
-	--if recGesture then
+	if recGesture then
 		if pose == "fist" and edge == "on" then
 	    	-- i dunno bruh
-	    	myo.debug("fist1")
+	    	myo.debug("fist-nothing")
 	    elseif pose == "fingersSpread" and edge == "on" then
-	    	myo.debug("fingersSpread1")
+	    	myo.debug("fingersSpread - called commandTab")
+
 	    	commandTab()
 	    elseif pose == "waveIn" and edge == "on" then
-	    	myo.debug("waveIn1")
+	    	if()
+	    	myo.debug("waveIn - called leftTab")
 	    	leftTab()
 	    elseif pose == "waveOut" and edge == "on" then
-	    	myo.debug("waveOut1")
+	    	myo.debug("waveOut - called rightTab")
 	    	rightTab()
 	    end
     end
@@ -51,17 +54,16 @@ function commandTab()
 		inTabMenu = true
 	elseif inTabMenu then
 		myo.keyboard("left_command", "up")
-		myo.keyboard("tab", "down")
 		inTabMenu = false
 	end
 end
 function rightTab()
 	if inTabMenu then
-		myo.keyboard("right_arrow")
+		myo.keyboard("right_arrow", "press")
 	end
 end
 function leftTab()
 	if inTabMenu then
-		myo.keyboard("right_arrow")
+		myo.keyboard("left_arrow", "press")
 	end
 end
