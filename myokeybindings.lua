@@ -1,4 +1,4 @@
-scriptId = 'com.buildncode.codeday.basicfirstrun'
+scriptId = 'com.rohaniyer.myokeybindings'
 
 recGesture = false
 inTabMenu = false
@@ -13,7 +13,7 @@ function onPoseEdge(pose, edge)
 			recGesture = false
 		end
 	end
-	if recGesture then
+	--if recGesture then
 		if pose == "fist" and edge == "on" then
 	    	-- i dunno bruh
 	    	myo.debug("fist1")
