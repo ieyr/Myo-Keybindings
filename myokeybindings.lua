@@ -1,8 +1,4 @@
-<<<<<<< HEAD:myokeybindings.lua
 scriptId = 'com.rohaniyer.myokeybindings'
-=======
-scriptId = 'com.rohan.myokeybindings'
->>>>>>> FETCH_HEAD:basicfirstrun.lua
 
 recGesture = false
 inTabMenu = false
